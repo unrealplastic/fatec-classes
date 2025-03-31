@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula DOM</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1 id="titulo">Título</h1>
+            <p class="paragrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quia accusamus sunt unde id, excepturi, nulla incidunt laudantium numquam praesentium quidem illo voluptatum sit quibusdam deleniti delectus deserunt debitis similique.</p>
+            <button>OK</button>
+            <form id="form-submmit">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+                <label for="idade">Idade</label>
+                <input type="text" id="idade" placeholder="Digite sua idade">
+                <button type="submit">Enviar</button>
+            </form>
+
+        </section>
+    </main>
+
+    <article>
+        <form id="form-cep">
+            <label for="cep" >CEP</label>
+            <input type="text" id="cep" name="cep" placeholder="Digite o CEP">
+            <label for="rua" >Rua</label>
+            <input type="text" id="rua" name="rua" placeholder="Digite o rua">
+            <label for="bairro" >Bairro</label>
+            <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro">
+            <label for="cidade" >Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade">
+            <label for="uf" >UF</label>
+            <input type="text" id="uf" name="uf" placeholder="Digite a UF">
+        </form>
+    </article>
+
+    <script src="js/app.js" defer></script> <!--defer indica que o script só será carregdo se o dom fro carregado anes-->
+</body>
+</html>
