@@ -1,0 +1,95 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(242, 242, 242);
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(103, 99, 173);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+.container {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(242, 242, 242);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.form-container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#produtoForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 68, 126);
+    border-radius: 15px;
+}
+
+#usuarioForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 68, 126);
+    border-radius: 15px;
+}
+
+
+#nome, #preco, #estoque, #email, #senha{
+    background-color: rgb(221, 221, 221);
+    width: 80%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-left: 10px;
+}
+
+#cadastrar{
+    width: 80%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(61, 169, 61);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+#cadastrar:hover{
+    background-color: rgb(19, 142, 19);
+}

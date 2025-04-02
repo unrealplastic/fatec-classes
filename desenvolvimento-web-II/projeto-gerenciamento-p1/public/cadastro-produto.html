@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastrar Produto</h1>
+    </header>
+        <div class="container">
+            <div class="form-container">
+                <form id="produtoForm">
+                  <input type="text" id="nome" placeholder="Nome" required minlength="3">
+                  <input type="number" id="preco" placeholder="Preço" step="0.01" min="0.01" required>
+                  <input type="number" id="estoque" placeholder="Estoque" min="0" required>
+                  <button type="submit" id="cadastrar">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+        <script src="produto.js"></script>
+</body>
+</html>
