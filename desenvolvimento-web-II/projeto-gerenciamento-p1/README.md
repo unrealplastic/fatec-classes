@@ -56,3 +56,7 @@ Verificamos os dados que entram nos controllers antes de guardar no banco de dad
 - Manual oficial do Express: https://expressjs.com/
 - Manual do Sequelize: https://sequelize.org/
 - Manual do MySQL: https://dev.mysql.com/doc/
+
+7. Participantes
+- Nicole Lisboa de Carvalho
+- Vinicius de Moraes Crepaldi
