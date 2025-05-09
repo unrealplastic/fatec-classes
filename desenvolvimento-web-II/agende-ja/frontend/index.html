@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgendeJá - Consultas</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="max-w-2xl mx-auto p-6">
+    <h1 class="text-3xl font-bold text-center mb-6 text-blue-700">AgendeJá - Consultas Médicas</h1>
+
+    <!-- Formulário de Cadastro -->
+    <div class="bg-white shadow-md rounded p-4 mb-6">
+      <h2 class="text-xl font-semibold mb-4">Cadastrar Consulta</h2>
+      <form id="consultaForm" class="space-y-4">
+        <input type="text" id="paciente" placeholder="Nome do Paciente" class="w-full p-2 border rounded">
+        <input type="date" id="data" class="w-full p-2 border rounded">
+        <input type="text" id="especialidade" placeholder="Especialidade" class="w-full p-2 border rounded">
+        <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Agendar</button>
+      </form>
+    </div>
+
+    <!-- Lista de Consultas -->
+    <div class="bg-white shadow-md rounded p-4">
+      <h2 class="text-xl font-semibold mb-4">Consultas Agendadas</h2>
+      <ul id="listaConsultas" class="space-y-2"></ul>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('consultaForm');
+    const lista = document.getElementById('listaConsultas');
+
+    async function carregarConsultas() {
+      const res = await fetch('http://localhost:3000/consultas');
+      const consultas = await res.json();
+      lista.innerHTML = '';
+      consultas.forEach(c => {
+        const item = document.createElement('li');
+        item.className = "p-3 bg-gray-100 rounded flex justify-between items-center";
+        item.innerHTML = `
+          <div>
+            <strong>${c.paciente}</strong> - ${c.especialidade} em ${c.data}
+          </div>
+          <button onclick="cancelarConsulta(${c.id})" class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Cancelar</button>
+        `;
+        lista.appendChild(item);
+      });
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const paciente = document.getElementById('paciente').value;
+      const data = document.getElementById('data').value;
+      const especialidade = document.getElementById('especialidade').value;
+
+      await fetch('http://localhost:3000/consultas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ paciente, data, especialidade })
+      });
+
+      form.reset();
+      carregarConsultas();
+    });
+
+    async function cancelarConsulta(id) {
+      await fetch(`http://localhost:3000/consultas/${id}`, { method: 'DELETE' });
+      carregarConsultas();
+    }
+
+    carregarConsultas();
+  </script>
+</body>
+</html>
