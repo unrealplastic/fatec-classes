@@ -1,0 +1,14 @@
+com\mycompany\lanchonetestrategydecorator\Burger.class
+com\mycompany\lanchonetestrategydecorator\Pizza.class
+com\mycompany\lanchonetestrategydecorator\CashPayment.class
+com\mycompany\lanchonetestrategydecorator\PaymentStrategy.class
+com\mycompany\lanchonetestrategydecorator\Soda.class
+com\mycompany\lanchonetestrategydecorator\ExtraCheese.class
+com\mycompany\lanchonetestrategydecorator\CreditCardPayment.class
+com\mycompany\lanchonetestrategydecorator\ItemDecorator.class
+com\mycompany\lanchonetestrategydecorator\PixPayment.class
+com\mycompany\lanchonetestrategydecorator\LanchoneteStrategyDecorator.class
+com\mycompany\lanchonetestrategydecorator\Item.class
+com\mycompany\lanchonetestrategydecorator\Juice.class
+com\mycompany\lanchonetestrategydecorator\Bacon.class
+com\mycompany\lanchonetestrategydecorator\Order.class
