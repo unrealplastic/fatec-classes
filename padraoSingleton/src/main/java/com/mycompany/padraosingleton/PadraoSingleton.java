@@ -4,21 +4,20 @@
 
 package com.mycompany.padraosingleton;
 
+import java.io.IOException;
+
 /**
  *
  * @author dti
  */
 public class PadraoSingleton {
 
-    public static void main(String[] args) {
-        Singleton s = Singleton.getInstance();
-        Singleton s1 = Singleton.getInstance();
-        
-        Teste t1 = new Teste();
-        Teste t2 = new Teste();
-        
-        System.out.println(t1==t2);
-        System.out.print(s==s1);
-        
+    public static void main(String[] args) throws IOException {
+        // Obtendo a instância única do gerenciador de configurações
+    ConfigManager config = ConfigManager.getInstance();
+
+        // Mostrando configurações
+        System.out.println("Nome do Aplicativo: " + config.getConfig("app.name"));
     }
+   
 }

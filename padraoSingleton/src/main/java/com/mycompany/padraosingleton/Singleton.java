@@ -10,14 +10,14 @@ package com.mycompany.padraosingleton;
  */
 public class Singleton {
     private static Singleton instance;
-    
-    private Singleton(){    
+    private Singleton(){
+        
     }
-    
-    public static synchronized Singleton getInstance(){ //synchronized garante que apenas uma instância seja criada
+    public static synchronized Singleton getInstance(){
         if(instance == null){
-            instance = new Singleton();
+            instance= new Singleton();
         }
-        return instance;
-    }
+     return instance;
+    }    
+    
 }
